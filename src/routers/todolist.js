@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 
 router.get('*/', (req, res) => {
     res.render('404', {
-        errorMessage: 'Resource not found'
+        errorMessage: 'Resource not found!'
     })
 })
 
