@@ -3,7 +3,7 @@
 const express = require('express')
 const router = new express.Router()
 
-router.get('/list', async (req, res) => {
+router.get('/', async (req, res) => {
 
     var jsonTest = {
         valueA: 'value1',
@@ -17,9 +17,9 @@ router.get('/list', async (req, res) => {
     }
 })
 
-router.get('/test', (req, res) => {
+router.get('*/', (req, res) => {
     res.render('404', {
-        errorMessage: 'Error test'
+        errorMessage: 'Resource not found'
     })
 })
 
